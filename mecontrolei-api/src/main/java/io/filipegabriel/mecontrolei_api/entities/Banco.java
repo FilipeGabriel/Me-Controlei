@@ -26,11 +26,6 @@ public class Banco {
 	
 	@Column(nullable = false)
 	private	boolean pago = false;
-	/*
-	@OneToOne
-	private ItemUnitario itemUnitario;
 	
-	@OneToOne
-	private ItemMensal itemMensal;
-	*/
+	private Usuario usuarioDono;
 }

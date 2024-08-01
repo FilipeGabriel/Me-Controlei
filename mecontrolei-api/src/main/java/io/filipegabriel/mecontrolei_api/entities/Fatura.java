@@ -5,8 +5,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -24,19 +22,6 @@ public class Fatura {
 	@Column(nullable = false)
 	private	boolean pago = false;
 	
-	@OneToOne
-	private Mes mes;
-	
-	@OneToOne
-	private GastoUnitario gastounitario;
-	
-	@OneToOne
-	private GastoMensal gastoMensal;
-	
-	@OneToOne
-	private GastosTerceiros gastosTerceiros;
-	
-	@ManyToOne
-	private Conta conta;
+	private Usuario usuarioDono;
 	
 }
